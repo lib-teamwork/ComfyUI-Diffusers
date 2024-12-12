@@ -10,7 +10,7 @@ import folder_paths
 # from diffusers import StableDiffusionPipeline, AutoencoderKL, AutoencoderTiny
 from diffusers import StableDiffusionPipeline, AutoencoderKL
 from configs.node_fields import get_field_pre_values
-
+StreamDiffusion = None
 
 class DiffusersPipelineLoader:
     def __init__(self):
