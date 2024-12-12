@@ -8,6 +8,7 @@ import folder_paths
 from streamdiffusion import StreamDiffusion
 from streamdiffusion.image_utils import postprocess_image
 from diffusers import StableDiffusionPipeline, AutoencoderKL, AutoencoderTiny
+from configs.node_fields import get_field_pre_values
 
 
 class DiffusersPipelineLoader:
@@ -48,7 +49,8 @@ class DiffusersVaeLoader:
     
     @classmethod
     def INPUT_TYPES(s):
-        return {"required": { "vae_name": (folder_paths.get_filename_list("vae"), ), }}
+        # return {"required": { "vae_name": (folder_paths.get_filename_list("vae"), ), }}
+        return {"required": { "vae_name": (get_field_pre_values("DiffusersVaeLoader", "vae_name"),), }}
 
     RETURN_TYPES = ("AUTOENCODER",)
 
@@ -412,11 +414,11 @@ NODE_CLASS_MAPPINGS = {
     "DiffusersClipTextEncode": DiffusersClipTextEncode,
     "DiffusersSampler": DiffusersSampler,
     "CreateIntListNode": CreateIntListNode,
-    "LcmLoraLoader": LcmLoraLoader,
-    "StreamDiffusionCreateStream": StreamDiffusionCreateStream,
-    "StreamDiffusionSampler": StreamDiffusionSampler,
-    "StreamDiffusionWarmup": StreamDiffusionWarmup,
-    "StreamDiffusionFastSampler": StreamDiffusionFastSampler,
+    # "LcmLoraLoader": LcmLoraLoader,
+    # "StreamDiffusionCreateStream": StreamDiffusionCreateStream,
+    # "StreamDiffusionSampler": StreamDiffusionSampler,
+    # "StreamDiffusionWarmup": StreamDiffusionWarmup,
+    # "StreamDiffusionFastSampler": StreamDiffusionFastSampler,
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
