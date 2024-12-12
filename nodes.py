@@ -7,7 +7,8 @@ from comfy.model_management import get_torch_device
 import folder_paths
 # from streamdiffusion import StreamDiffusion
 # from streamdiffusion.image_utils import postprocess_image
-from diffusers import StableDiffusionPipeline, AutoencoderKL, AutoencoderTiny
+# from diffusers import StableDiffusionPipeline, AutoencoderKL, AutoencoderTiny
+from diffusers import StableDiffusionPipeline, AutoencoderKL
 from configs.node_fields import get_field_pre_values
 
 
